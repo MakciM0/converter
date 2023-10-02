@@ -1,10 +1,25 @@
-.App{
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+.App {
+  
   background-color: whitesmoke;
   height: 100vh;
   text-align: center;
 
-  h1{
-  margin: 0;
-  padding: 0;
+  h1 {
+    margin: 0;
+    padding: 0;
   }
+}
+
+.changePlus span{
+  color: green;
+}
+.changeMinus span{
+  color: red;
 }

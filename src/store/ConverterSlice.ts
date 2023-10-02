@@ -6,20 +6,20 @@ import { TCurrency } from "../types/types";
 const ConverterSlice = createSlice({
   name: "converter",
   initialState: {
-    currencies : [{
+    currencies: [{
       name: '',
       priceUsd: 1,
-      }] as TCurrency[],
+    }] as TCurrency[],
   },
 
   reducers: {
     SetCurrencies: (state, action: PayloadAction<TCurrency[]>) => {
       state.currencies = action.payload;
-      state.currencies.forEach((item, i) =>{
+      state.currencies.forEach((item, i) => {
         state.currencies[i].priceUsd = Number(Number(item.priceUsd).toFixed(6));
       });
     },
-   
+
   },
 });
 
